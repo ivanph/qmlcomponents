@@ -1,0 +1,22 @@
+div(ng-include='"components/navbar/navbar.html"')
+
+header#banner.hero-unit
+  .container
+      img#qml-logo(src='assets/images/qml.png', alt='QML')
+      p#banner-message.lead A simple QML components repository
+
+.container
+  .row
+    .col-lg-12
+      h1.page-header Components:
+      ul.nav(ng-repeat='component in components')
+        li
+            div.list-group
+                a.list-group-item(href='#')
+                    h4.list-group-item-heading {{component.name}}
+                    p.list-group-item-text {{component.info}}
+
+footer.footer
+  .container
+    p
+      | Made with Angular Fullstack
